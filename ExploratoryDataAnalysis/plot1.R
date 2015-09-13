@@ -7,7 +7,7 @@ housedata <- subset(data_full, subset=(Date >= "2007-02-01" & Date <= "2007-02-0
 rm(data_full)
 
 ## Converting dates
-datetime <- paste(as.Date(housedata$Date), data$Time)
+datetime <- paste(as.Date(housedata$Date), housedata$Time)
 housedata$Datetime <- as.POSIXct(datetime)
 
 ## Plot 1

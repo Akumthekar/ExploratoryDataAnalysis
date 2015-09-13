@@ -8,7 +8,7 @@ hdata <- subset(data_full, subset=(Date >= "2007-02-01" & Date <= "2007-02-02"))
 rm(data_full)
 
 ## Converting dates
-datetime <- paste(as.Date(hdata$Date), data$Time)
+datetime <- paste(as.Date(hdata$Date), hdata$Time)
 hdata$Datetime <- as.POSIXct(datetime)
 
 ## Plot 3
