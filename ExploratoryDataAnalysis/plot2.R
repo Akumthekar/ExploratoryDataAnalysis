@@ -12,7 +12,7 @@ datetime <- paste(as.Date(hdata$Date), hdata$Time)
 hdata$Datetime <- as.POSIXct(datetime)
 
 ## Plot 2
-plot(hdata$Global_active_power~data, type="l",
+plot(hdata$Global_active_power~hdata$Datetime, type="l",
      ylab="Global Active Power (kilowatts)", xlab="")
 dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()
